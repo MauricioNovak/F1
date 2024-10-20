@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainCover{
+    background-image: url("/assets/img/cover.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "aside"
+    "main"
+    "footer";
+}
+
+nav{
+    display: flex;
+    grid-area: nav;
+    background-color: #e10600;
+}
+
+aside{
+    grid-area: aside;
+    background-color: black;
+    height: 5rem;
+}
+
+
+main{
+    grid-area: main;
+    background-color: white;
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+    height: 5rem;
+}
+
+.divAside{
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+li{
+    border: 1px solid white;
+    text-align: center;
+    padding: 0.7rem;
+    border-radius: 1rem ;
+    width: 3rem;
+    transition: background-color 0.4s ease-in;
+}
+
+li:hover{
+    background-color: red;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.logo{
+    display: flex;
+    margin-left: 1.3rem;
+}
+
+
+.logoSize{
+    width: 9rem;
+    animation: rotate 0.2s 4 ease-in-out;
+    border-radius: 100%;
+}
+
+.carNav{
+    width: 100px;
+    position:absolute;
+    animation: move 6s ease-in-out 0.5s infinite;
+}
+
+@keyframes move {
+    from{ 
+        left:0px 
+        }
+
+    to{ 
+        left: 350px; 
+        }
+    
+    
+}
+
+.driverMainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(10,1fr);
+}
+
+.driverCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    margin: 0.3rem;
+    filter: saturate(0);
+    transition: filter 0.4s ease-out;
+}
+
+.driverImg{
+    width: 11rem;
+    transition: width 0.2s ease-in-out ;
+}
+
+.driverImg:hover{
+    width: 12.7rem;
+}
+
+.driverCard:hover{
+    filter: saturate(1);
+}
+
+.flag{
+    width: 3rem;
+    height: 2.3rem;
+}
+
+.driverletter{
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.bannerDriverFlex{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.bannerDriver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b90003;
+    width: 80vw;
+    height: 5rem;
+    gap:1rem;
+    border-radius: 10rem; 
+    padding-left: 1rem;
+}
+
+
+.helmetSize{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+}
+
+.letter{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: font-size 0.4s;
+}
+
+.letter:hover{
+font-size: 3rem;
+}
+
+
+.teamCard{
+    display: flex;
+    justify-content: center;
+    filter: saturate(0);
+    transition: filter 0.4s ease-out;
+}
+
+.teamCard:hover{
+    filter: saturate(1);
+}
+
+.teamMainContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10,1fr);
+}
+
+.bannerTeamFlex{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.bannerTeam{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fc931a;
+    width: 80vw;
+    height: 5rem;
+    border-radius: 10rem; 
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.teamCarSize{
+    width: 30rem;
+}
+
+.CarLogoSize{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+}
+
+.trackMainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5,1fr);
+}
+
+.bannerTrackFlex{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.bannerTrack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a212f;
+    width: 80vw;
+    height: 5rem;
+    border-radius: 10rem; 
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.TrackLogoSize{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+}
+
+.trackCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    filter: saturate(0);
+    transition: filter 0.4s ease-out;
+}
+
+.trackCard:hover{
+    filter:saturate(1.5);
+}
+
+.GPSize{
+    width: 16rem;
+    height: 12rem;
+}
+
+.trackLetter{
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.icons{
+    height: 2rem;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icons a:hover{
+    color: red;
+}
+
+.footerDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLetter{
+    color: white;
+    font-size: bold;
+    margin-bottom: 1px;
+}
+
+.CheckFlag{
+    display: none;
+}
+
+
+
+@media (width > 576px){
+
+    .driverMainContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(7,1fr);
+    }
+
+    li{
+        width: 7rem;
+    }
+
+    @keyframes move {
+        from{ left:0px }        
+        to{ left: 700px; }
+    }
+
+
+}
+
+@media (width > 840px){
+
+    .teamMainContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5,1fr);
+    }
+
+    .trackMainContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+
+    li{
+        width: 8rem;
+    }
+
+    @keyframes move {
+        from{ left:0px }        
+        to{ left: 850px; }
+        
+    }
+
+
+    
+}
+
+@media (width > 992px){
+
+    .driverMainContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+
+    li{
+        width: 10rem;
+    }
+
+    @keyframes move {
+        from{ left:0px }        
+        to{ left: 1000px; }
+        
+    }
+
+
+
+}
+
+@media (width > 1350px){
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-areas: 
+        "nav nav"
+        "aside main"
+        "footer main";
+    }
+
+    nav{
+        grid-area: nav;
+        background-color: #e10600;
+        height: 3.6rem;
+    }
+    
+    aside{
+        grid-area: aside;
+        background-color: black;
+        height: 290rem;
+    }
+    
+    
+    main{
+        grid-area: main;
+        background-color: white;
+    }
+    
+    footer{
+        grid-area: footer;
+        background-color: black;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 35rem;
+        list-style: none;
+        gap: 5rem;
+    }
+    
+    li{
+        border: 1px solid white;
+        padding: 1rem;
+        border-radius: 1rem ;
+        width: 10rem;
+        text-align: center;
+    }
+
+    .driverMainContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+
+    .teamMainContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+
+    .trackMainContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    .logo{
+        display: flex;
+        margin-left: 5rem;
+    }
+
+    .carNav{
+        width: 100px;
+        position: absolute;
+        animation: move 9s 1s infinite;
+    
+    }
+
+    @keyframes move {
+        from{ left:0px }        
+        to{ left: 1450px }
+        
+    }
+
+
+
+}
